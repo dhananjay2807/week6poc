@@ -1,0 +1,1295 @@
+2021-04-30T14:49:45.045Z] [org.springframework.boot.StartupInfoLogger] [main] [50] [INFO ] Starting RegistrationAppApplicationTests on DESKTOP-G1RGPL5 with PID 5836 (started by user in C:\Users\user\Downloads\pro2\RegistrationApp)
+2021-04-30T14:49:45.045Z] [org.springframework.boot.SpringApplication] [main] [675] [INFO ] No active profile set, falling back to default profiles: default
+2021-04-30T14:49:47.047Z] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [126] [INFO ] Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-04-30T14:49:47.047Z] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [182] [INFO ] Finished Spring Data repository scanning in 110ms. Found 1 repository interfaces.
+2021-04-30T14:49:49.049Z] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$408dcbc9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-30T14:49:49.049Z] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+2021-04-30T14:49:52.052Z] [com.zaxxer.hikari.pool.HikariPool] [main] [574] [ERROR] HikariPool-1 - Exception during pool initialization.
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:127)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:862)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:230)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:226)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:157)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:319)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:356)
+	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:73)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:142)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:113)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$5f648e38.CGLIB$jpaVendorAdapter$5(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$5f648e38$$FastClassBySpringCGLIB$$72d669d0.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$5f648e38.jpaVendorAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1305)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1305)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1305)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:127)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:97)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassTestDescriptor.java:349)
+	at org.junit.jupiter.engine.descriptor.JupiterTestDescriptor.executeAndMaskThrowable(JupiterTestDescriptor.java:215)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassTestDescriptor.java:349)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.ReferencePipeline$Head.forEach(Unknown Source)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.invokeTestInstancePostProcessors(ClassTestDescriptor.java:348)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.instantiateAndPostProcessTestInstance(ClassTestDescriptor.java:270)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$testInstanceProvider$2(ClassTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$testInstanceProvider$3(ClassTestDescriptor.java:263)
+	at java.util.Optional.orElseGet(Unknown Source)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$testInstanceProvider$4(ClassTestDescriptor.java:262)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$before$0(ClassTestDescriptor.java:192)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.before(ClassTestDescriptor.java:191)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.before(ClassTestDescriptor.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:102)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:71)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:110)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:71)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:137)
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
+2021-04-30T14:49:52.052Z] [org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup] [main] [81] [WARN ] Unable to determine jdbc url from datasource
+org.springframework.jdbc.support.MetaDataAccessException: Could not get Connection for extracting meta-data; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:328)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:356)
+	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:73)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:142)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:113)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$5f648e38.CGLIB$jpaVendorAdapter$5(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$5f648e38$$FastClassBySpringCGLIB$$72d669d0.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$5f648e38.jpaVendorAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1305)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1305)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1305)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:127)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:97)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassTestDescriptor.java:349)
+	at org.junit.jupiter.engine.descriptor.JupiterTestDescriptor.executeAndMaskThrowable(JupiterTestDescriptor.java:215)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassTestDescriptor.java:349)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.ReferencePipeline$Head.forEach(Unknown Source)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.invokeTestInstancePostProcessors(ClassTestDescriptor.java:348)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.instantiateAndPostProcessTestInstance(ClassTestDescriptor.java:270)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$testInstanceProvider$2(ClassTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$testInstanceProvider$3(ClassTestDescriptor.java:263)
+	at java.util.Optional.orElseGet(Unknown Source)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$testInstanceProvider$4(ClassTestDescriptor.java:262)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$before$0(ClassTestDescriptor.java:192)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.before(ClassTestDescriptor.java:191)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.before(ClassTestDescriptor.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:102)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:71)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:110)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:71)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:137)
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:319)
+	... 111 common frames omitted
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:127)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:862)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:230)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:226)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:157)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	... 112 common frames omitted
+2021-04-30T14:49:52.052Z] [org.hibernate.jpa.internal.util.LogHelper] [main] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-04-30T14:49:52.052Z] [org.hibernate.Version] [main] [46] [INFO ] HHH000412: Hibernate Core {5.3.7.Final}
+2021-04-30T14:49:52.052Z] [org.hibernate.cfg.Environment] [main] [213] [INFO ] HHH000206: hibernate.properties not found
+2021-04-30T14:49:52.052Z] [org.hibernate.annotations.common.reflection.java.JavaReflectionManager] [main] [49] [INFO ] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration boolean -> org.hibernate.type.BooleanType@1578b8ec
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration boolean -> org.hibernate.type.BooleanType@1578b8ec
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@1578b8ec
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@226de93c
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration true_false -> org.hibernate.type.TrueFalseType@7b222230
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration yes_no -> org.hibernate.type.YesNoType@172f4514
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration byte -> org.hibernate.type.ByteType@a54acec
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration byte -> org.hibernate.type.ByteType@a54acec
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@a54acec
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration character -> org.hibernate.type.CharacterType@41f3aaf1
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration char -> org.hibernate.type.CharacterType@41f3aaf1
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@41f3aaf1
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration short -> org.hibernate.type.ShortType@2eb60c71
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration short -> org.hibernate.type.ShortType@2eb60c71
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Short -> org.hibernate.type.ShortType@2eb60c71
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration integer -> org.hibernate.type.IntegerType@6a950a3b
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration int -> org.hibernate.type.IntegerType@6a950a3b
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@6a950a3b
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration long -> org.hibernate.type.LongType@59303963
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration long -> org.hibernate.type.LongType@59303963
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Long -> org.hibernate.type.LongType@59303963
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration float -> org.hibernate.type.FloatType@69c532af
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration float -> org.hibernate.type.FloatType@69c532af
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Float -> org.hibernate.type.FloatType@69c532af
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration double -> org.hibernate.type.DoubleType@8fd91d1
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration double -> org.hibernate.type.DoubleType@8fd91d1
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@8fd91d1
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@236ae13d
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@236ae13d
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration big_integer -> org.hibernate.type.BigIntegerType@5e7abaf7
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@5e7abaf7
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration string -> org.hibernate.type.StringType@3e1f1046
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.String -> org.hibernate.type.StringType@3e1f1046
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration nstring -> org.hibernate.type.StringNVarcharType@1d7eb170
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@230a73f2
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration url -> org.hibernate.type.UrlType@7f97bc14
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.net.URL -> org.hibernate.type.UrlType@7f97bc14
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration Duration -> org.hibernate.type.DurationType@5e002356
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.Duration -> org.hibernate.type.DurationType@5e002356
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration Instant -> org.hibernate.type.InstantType@261de205
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.Instant -> org.hibernate.type.InstantType@261de205
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@443a53df
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@443a53df
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration LocalDate -> org.hibernate.type.LocalDateType@678a9516
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@678a9516
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@7a1a3468
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@7a1a3468
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@16ee9aa7
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@16ee9aa7
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@4d0cc83e
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@4d0cc83e
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@6b415f5f
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@6b415f5f
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration date -> org.hibernate.type.DateType@5e0c4f21
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.sql.Date -> org.hibernate.type.DateType@5e0c4f21
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration time -> org.hibernate.type.TimeType@70b2fa10
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.sql.Time -> org.hibernate.type.TimeType@70b2fa10
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration timestamp -> org.hibernate.type.TimestampType@5927f904
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@5927f904
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.Date -> org.hibernate.type.TimestampType@5927f904
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@644d1b61
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration calendar -> org.hibernate.type.CalendarType@1f4f0fcc
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@1f4f0fcc
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@1f4f0fcc
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@1e98b788
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration locale -> org.hibernate.type.LocaleType@eed890d
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@eed890d
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration currency -> org.hibernate.type.CurrencyType@64518270
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@64518270
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration timezone -> org.hibernate.type.TimeZoneType@52b959df
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@52b959df
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration class -> org.hibernate.type.ClassType@668cc9a2
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Class -> org.hibernate.type.ClassType@668cc9a2
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@57e5396b
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@57e5396b
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@27b337bb
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration binary -> org.hibernate.type.BinaryType@7ab802f4
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration byte[] -> org.hibernate.type.BinaryType@7ab802f4
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration [B -> org.hibernate.type.BinaryType@7ab802f4
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@65be88ae
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@65be88ae
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@65be88ae
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration row_version -> org.hibernate.type.RowVersionType@6c538eb2
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration image -> org.hibernate.type.ImageType@324b6a56
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration characters -> org.hibernate.type.CharArrayType@ccd341d
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration char[] -> org.hibernate.type.CharArrayType@ccd341d
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration [C -> org.hibernate.type.CharArrayType@ccd341d
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@77b5148c
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@77b5148c
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@77b5148c
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration text -> org.hibernate.type.TextType@16b3c905
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration ntext -> org.hibernate.type.NTextType@437bd805
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration blob -> org.hibernate.type.BlobType@7a65a360
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@7a65a360
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@6401188a
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration clob -> org.hibernate.type.ClobType@373afd6c
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@373afd6c
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration nclob -> org.hibernate.type.NClobType@4017fe2c
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@4017fe2c
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@3e26482
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@6b63abdc
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration serializable -> org.hibernate.type.SerializableType@9df564f
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration object -> org.hibernate.type.ObjectType@1213ffbc
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@1213ffbc
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@1310fcb0
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@1ef31f71
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@6e8fdd19
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@35787726
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@2199e845
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@27976390
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@37e0056e
+2021-04-30T14:49:52.052Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@415795f3
+2021-04-30T14:49:52.052Z] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+2021-04-30T14:49:53.053Z] [com.zaxxer.hikari.pool.HikariPool] [main] [574] [ERROR] HikariPool-1 - Exception during pool initialization.
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:127)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:862)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:230)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:226)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:94)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:179)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:119)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:904)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:935)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1821)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1758)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:127)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:97)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassTestDescriptor.java:349)
+	at org.junit.jupiter.engine.descriptor.JupiterTestDescriptor.executeAndMaskThrowable(JupiterTestDescriptor.java:215)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassTestDescriptor.java:349)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.ReferencePipeline$Head.forEach(Unknown Source)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.invokeTestInstancePostProcessors(ClassTestDescriptor.java:348)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.instantiateAndPostProcessTestInstance(ClassTestDescriptor.java:270)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$testInstanceProvider$2(ClassTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$testInstanceProvider$3(ClassTestDescriptor.java:263)
+	at java.util.Optional.orElseGet(Unknown Source)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$testInstanceProvider$4(ClassTestDescriptor.java:262)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$before$0(ClassTestDescriptor.java:192)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.before(ClassTestDescriptor.java:191)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.before(ClassTestDescriptor.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:102)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:71)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:110)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:71)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:137)
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
+2021-04-30T14:49:53.053Z] [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator] [main] [132] [WARN ] HHH000342: Could not obtain connection to query metadata : Access denied for user 'root'@'localhost' (using password: YES)
+2021-04-30T14:49:54.054Z] [org.hibernate.dialect.Dialect] [main] [157] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-04-30T14:49:54.054Z] [org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl] [main] [63] [INFO ] HHH000422: Disabling contextual LOB creation as connection was null
+2021-04-30T14:49:54.054Z] [org.hibernate.type.spi.TypeConfiguration] [main] [142] [DEBUG] Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@74b00247] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@2aa14ae6]
+2021-04-30T14:49:54.054Z] [org.hibernate.type.spi.TypeConfiguration] [main] [147] [DEBUG] Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@74b00247] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@37c1cfa]
+2021-04-30T14:49:55.055Z] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+2021-04-30T14:49:56.056Z] [com.zaxxer.hikari.pool.HikariPool] [main] [574] [ERROR] HikariPool-1 - Exception during pool initialization.
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:127)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:862)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:230)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:226)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:43)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:67)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.getTables(InformationExtractorJdbcDatabaseMetaDataImpl.java:329)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:120)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:65)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:207)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:114)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:183)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:310)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:467)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:939)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1821)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1758)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:127)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:97)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassTestDescriptor.java:349)
+	at org.junit.jupiter.engine.descriptor.JupiterTestDescriptor.executeAndMaskThrowable(JupiterTestDescriptor.java:215)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassTestDescriptor.java:349)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.ReferencePipeline$Head.forEach(Unknown Source)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.invokeTestInstancePostProcessors(ClassTestDescriptor.java:348)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.instantiateAndPostProcessTestInstance(ClassTestDescriptor.java:270)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$testInstanceProvider$2(ClassTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$testInstanceProvider$3(ClassTestDescriptor.java:263)
+	at java.util.Optional.orElseGet(Unknown Source)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$testInstanceProvider$4(ClassTestDescriptor.java:262)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$before$0(ClassTestDescriptor.java:192)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.before(ClassTestDescriptor.java:191)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.before(ClassTestDescriptor.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:102)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:71)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:110)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:71)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:137)
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
+2021-04-30T14:49:56.056Z] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [main] [137] [WARN ] SQL Error: 1045, SQLState: 28000
+2021-04-30T14:49:56.056Z] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [main] [142] [ERROR] Access denied for user 'root'@'localhost' (using password: YES)
+2021-04-30T14:49:56.056Z] [org.hibernate.type.spi.TypeConfiguration] [main] [201] [TRACE] Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@37c1cfa] for TypeConfiguration
+2021-04-30T14:49:56.056Z] [org.hibernate.type.spi.TypeConfiguration$Scope] [main] [312] [DEBUG] Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@67b5e613] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@37c1cfa]
+2021-04-30T14:49:56.056Z] [org.springframework.context.support.AbstractApplicationContext] [main] [557] [WARN ] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+2021-04-30T14:49:56.056Z] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] [main] [142] [INFO ] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-04-30T14:49:56.056Z] [org.springframework.boot.SpringApplication] [main] [858] [ERROR] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1762)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:127)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:97)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassTestDescriptor.java:349)
+	at org.junit.jupiter.engine.descriptor.JupiterTestDescriptor.executeAndMaskThrowable(JupiterTestDescriptor.java:215)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassTestDescriptor.java:349)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.ReferencePipeline$Head.forEach(Unknown Source)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.invokeTestInstancePostProcessors(ClassTestDescriptor.java:348)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.instantiateAndPostProcessTestInstance(ClassTestDescriptor.java:270)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$testInstanceProvider$2(ClassTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$testInstanceProvider$3(ClassTestDescriptor.java:263)
+	at java.util.Optional.orElseGet(Unknown Source)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$testInstanceProvider$4(ClassTestDescriptor.java:262)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$before$0(ClassTestDescriptor.java:192)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.before(ClassTestDescriptor.java:191)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.before(ClassTestDescriptor.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:102)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:71)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:110)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:71)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:137)
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:402)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1821)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1758)
+	... 65 common frames omitted
+Caused by: org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:69)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:67)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.getTables(InformationExtractorJdbcDatabaseMetaDataImpl.java:329)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:120)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:65)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:207)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:114)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:183)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:310)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:467)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:939)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	... 69 common frames omitted
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:127)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:862)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:230)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:226)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:43)
+	... 84 common frames omitted
+2021-04-30T14:49:56.056Z] [org.springframework.test.context.TestContextManager] [main] [250] [ERROR] Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@74455848] to prepare test instance [com.registration.RegistrationApp.RegistrationAppApplicationTests@45571cfc]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:97)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassTestDescriptor.java:349)
+	at org.junit.jupiter.engine.descriptor.JupiterTestDescriptor.executeAndMaskThrowable(JupiterTestDescriptor.java:215)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassTestDescriptor.java:349)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.ReferencePipeline$Head.forEach(Unknown Source)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.invokeTestInstancePostProcessors(ClassTestDescriptor.java:348)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.instantiateAndPostProcessTestInstance(ClassTestDescriptor.java:270)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$testInstanceProvider$2(ClassTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$testInstanceProvider$3(ClassTestDescriptor.java:263)
+	at java.util.Optional.orElseGet(Unknown Source)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$testInstanceProvider$4(ClassTestDescriptor.java:262)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$before$0(ClassTestDescriptor.java:192)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.before(ClassTestDescriptor.java:191)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.before(ClassTestDescriptor.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:102)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:71)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:110)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:71)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:137)
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1762)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:127)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 50 common frames omitted
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:402)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1821)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1758)
+	... 65 common frames omitted
+Caused by: org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:69)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:67)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.getTables(InformationExtractorJdbcDatabaseMetaDataImpl.java:329)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:120)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:65)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:207)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:114)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:183)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:310)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:467)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:939)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	... 69 common frames omitted
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:127)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:862)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:230)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:226)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:43)
+	... 84 common frames omitted
+2021-04-30T14:51:34.034Z] [org.springframework.boot.StartupInfoLogger] [main] [50] [INFO ] Starting RegistrationAppApplicationTests on DESKTOP-G1RGPL5 with PID 15224 (started by user in C:\Users\user\Downloads\pro2\RegistrationApp)
+2021-04-30T14:51:34.034Z] [org.springframework.boot.SpringApplication] [main] [675] [INFO ] No active profile set, falling back to default profiles: default
+2021-04-30T14:51:36.036Z] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [126] [INFO ] Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-04-30T14:51:36.036Z] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [182] [INFO ] Finished Spring Data repository scanning in 102ms. Found 1 repository interfaces.
+2021-04-30T14:51:37.037Z] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9368e4d7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-30T14:51:38.038Z] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+2021-04-30T14:51:38.038Z] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+2021-04-30T14:51:38.038Z] [org.hibernate.jpa.internal.util.LogHelper] [main] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-04-30T14:51:38.038Z] [org.hibernate.Version] [main] [46] [INFO ] HHH000412: Hibernate Core {5.3.7.Final}
+2021-04-30T14:51:38.038Z] [org.hibernate.cfg.Environment] [main] [213] [INFO ] HHH000206: hibernate.properties not found
+2021-04-30T14:51:39.039Z] [org.hibernate.annotations.common.reflection.java.JavaReflectionManager] [main] [49] [INFO ] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration boolean -> org.hibernate.type.BooleanType@4262fdeb
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration boolean -> org.hibernate.type.BooleanType@4262fdeb
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@4262fdeb
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@77cb452c
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration true_false -> org.hibernate.type.TrueFalseType@6f25bf88
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration yes_no -> org.hibernate.type.YesNoType@62b3a2f6
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration byte -> org.hibernate.type.ByteType@37a0ec3c
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration byte -> org.hibernate.type.ByteType@37a0ec3c
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@37a0ec3c
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration character -> org.hibernate.type.CharacterType@44286963
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration char -> org.hibernate.type.CharacterType@44286963
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@44286963
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration short -> org.hibernate.type.ShortType@456f7d9e
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration short -> org.hibernate.type.ShortType@456f7d9e
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Short -> org.hibernate.type.ShortType@456f7d9e
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration integer -> org.hibernate.type.IntegerType@2047981
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration int -> org.hibernate.type.IntegerType@2047981
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@2047981
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration long -> org.hibernate.type.LongType@3ba1308d
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration long -> org.hibernate.type.LongType@3ba1308d
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Long -> org.hibernate.type.LongType@3ba1308d
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration float -> org.hibernate.type.FloatType@1b3ab4f9
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration float -> org.hibernate.type.FloatType@1b3ab4f9
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Float -> org.hibernate.type.FloatType@1b3ab4f9
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration double -> org.hibernate.type.DoubleType@151732fb
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration double -> org.hibernate.type.DoubleType@151732fb
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@151732fb
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@19e21f89
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@19e21f89
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration big_integer -> org.hibernate.type.BigIntegerType@7f42e06e
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@7f42e06e
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration string -> org.hibernate.type.StringType@50110971
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.String -> org.hibernate.type.StringType@50110971
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration nstring -> org.hibernate.type.StringNVarcharType@310b2b6f
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@315c081
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration url -> org.hibernate.type.UrlType@5bcec67e
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.net.URL -> org.hibernate.type.UrlType@5bcec67e
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration Duration -> org.hibernate.type.DurationType@1bbddada
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.Duration -> org.hibernate.type.DurationType@1bbddada
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration Instant -> org.hibernate.type.InstantType@68b7d0ef
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.Instant -> org.hibernate.type.InstantType@68b7d0ef
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@1f782c05
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@1f782c05
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration LocalDate -> org.hibernate.type.LocalDateType@6ad1701a
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@6ad1701a
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@62aeddc8
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@62aeddc8
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@319642db
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@319642db
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@7d0100ea
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@7d0100ea
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@7f73ce28
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@7f73ce28
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration date -> org.hibernate.type.DateType@3a1f2a1
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.sql.Date -> org.hibernate.type.DateType@3a1f2a1
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration time -> org.hibernate.type.TimeType@5d05f453
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.sql.Time -> org.hibernate.type.TimeType@5d05f453
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration timestamp -> org.hibernate.type.TimestampType@4d93f75b
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@4d93f75b
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.Date -> org.hibernate.type.TimestampType@4d93f75b
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@5d508d22
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration calendar -> org.hibernate.type.CalendarType@2ed9f6f8
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@2ed9f6f8
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@2ed9f6f8
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@79a13920
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration locale -> org.hibernate.type.LocaleType@5921b93c
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@5921b93c
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration currency -> org.hibernate.type.CurrencyType@13803a94
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@13803a94
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration timezone -> org.hibernate.type.TimeZoneType@1ad9b8d3
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@1ad9b8d3
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration class -> org.hibernate.type.ClassType@25b38203
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Class -> org.hibernate.type.ClassType@25b38203
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@7f3ca64a
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@7f3ca64a
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@2519026b
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration binary -> org.hibernate.type.BinaryType@27dc627a
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration byte[] -> org.hibernate.type.BinaryType@27dc627a
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration [B -> org.hibernate.type.BinaryType@27dc627a
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@16f0ec18
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@16f0ec18
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@16f0ec18
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration row_version -> org.hibernate.type.RowVersionType@359066bc
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration image -> org.hibernate.type.ImageType@245253d8
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration characters -> org.hibernate.type.CharArrayType@2233cac0
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration char[] -> org.hibernate.type.CharArrayType@2233cac0
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration [C -> org.hibernate.type.CharArrayType@2233cac0
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@28cd2c2
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@28cd2c2
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@28cd2c2
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration text -> org.hibernate.type.TextType@79b18230
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration ntext -> org.hibernate.type.NTextType@1b57c345
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration blob -> org.hibernate.type.BlobType@2f79f192
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@2f79f192
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@4e8b357d
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration clob -> org.hibernate.type.ClobType@6d6f6860
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@6d6f6860
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration nclob -> org.hibernate.type.NClobType@4bf80c29
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@4bf80c29
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@39b626e5
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@23cd5d42
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration serializable -> org.hibernate.type.SerializableType@4b425577
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration object -> org.hibernate.type.ObjectType@3a38f122
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@3a38f122
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@9b47400
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@747835f5
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@594131f2
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@51d0ec6f
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@7bee8621
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@4e0cc334
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@1e12a5a6
+2021-04-30T14:51:39.039Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@4877919f
+2021-04-30T14:51:39.039Z] [org.hibernate.dialect.Dialect] [main] [157] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-04-30T14:51:40.040Z] [org.hibernate.type.spi.TypeConfiguration] [main] [142] [DEBUG] Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@740a0d5e] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@29013ef2]
+2021-04-30T14:51:40.040Z] [org.hibernate.type.spi.TypeConfiguration] [main] [147] [DEBUG] Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@740a0d5e] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@159ac15f]
+2021-04-30T14:51:40.040Z] [org.hibernate.type.spi.TypeConfiguration] [main] [195] [TRACE] Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@159ac15f] for TypeConfiguration
+2021-04-30T14:51:40.040Z] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [main] [415] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-30T14:51:41.041Z] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration] [main] [236] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-30T14:51:42.042Z] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [main] [69] [INFO ] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2021-04-30T14:51:43.043Z] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport] [main] [171] [INFO ] Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30T14:51:44.044Z] [org.springframework.mock.web.MockServletContext] [main] [444] [INFO ] Initializing Spring TestDispatcherServlet ''
+2021-04-30T14:51:44.044Z] [org.springframework.web.servlet.FrameworkServlet] [main] [524] [INFO ] Initializing Servlet ''
+2021-04-30T14:51:44.044Z] [org.springframework.web.servlet.FrameworkServlet] [main] [546] [INFO ] Completed initialization in 30 ms
+2021-04-30T14:51:44.044Z] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [main] [160] [INFO ] Context refreshed
+2021-04-30T14:51:44.044Z] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [main] [163] [INFO ] Found 1 custom documentation plugin(s)
+2021-04-30T14:51:44.044Z] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [main] [41] [INFO ] Scanning for api listing references
+2021-04-30T14:51:45.045Z] [org.springframework.boot.StartupInfoLogger] [main] [59] [INFO ] Started RegistrationAppApplicationTests in 11.069 seconds (JVM running for 12.819)
+2021-04-30T14:51:45.045Z] [org.springframework.mock.web.MockServletContext] [main] [444] [INFO ] Initializing Spring TestDispatcherServlet ''
+2021-04-30T14:51:45.045Z] [org.springframework.web.servlet.FrameworkServlet] [main] [524] [INFO ] Initializing Servlet ''
+2021-04-30T14:51:45.045Z] [org.springframework.web.servlet.FrameworkServlet] [main] [546] [INFO ] Completed initialization in 4 ms
+2021-04-30T14:51:45.045Z] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport] [Thread-3] [208] [INFO ] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-30T14:51:45.045Z] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [Thread-3] [597] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-30T14:51:45.045Z] [org.hibernate.type.spi.TypeConfiguration] [Thread-3] [201] [TRACE] Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@159ac15f] for TypeConfiguration
+2021-04-30T14:51:45.045Z] [org.hibernate.type.spi.TypeConfiguration$Scope] [Thread-3] [312] [DEBUG] Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@7677d0cf] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@159ac15f]
+2021-04-30T14:51:45.045Z] [com.zaxxer.hikari.HikariDataSource] [Thread-3] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+2021-04-30T14:51:45.045Z] [com.zaxxer.hikari.HikariDataSource] [Thread-3] [352] [INFO ] HikariPool-1 - Shutdown completed.
+2021-04-30T14:55:04.004Z] [org.springframework.boot.StartupInfoLogger] [main] [50] [INFO ] Starting RegistrationAppApplicationTests on DESKTOP-G1RGPL5 with PID 15012 (started by user in C:\Users\user\Downloads\pro2\RegistrationApp)
+2021-04-30T14:55:04.004Z] [org.springframework.boot.SpringApplication] [main] [675] [INFO ] No active profile set, falling back to default profiles: default
+2021-04-30T14:55:06.006Z] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [126] [INFO ] Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-04-30T14:55:06.006Z] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [182] [INFO ] Finished Spring Data repository scanning in 120ms. Found 1 repository interfaces.
+2021-04-30T14:55:08.008Z] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9368e4d7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-30T14:55:08.008Z] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+2021-04-30T14:55:08.008Z] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+2021-04-30T14:55:08.008Z] [org.hibernate.jpa.internal.util.LogHelper] [main] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-04-30T14:55:09.009Z] [org.hibernate.Version] [main] [46] [INFO ] HHH000412: Hibernate Core {5.3.7.Final}
+2021-04-30T14:55:09.009Z] [org.hibernate.cfg.Environment] [main] [213] [INFO ] HHH000206: hibernate.properties not found
+2021-04-30T14:55:09.009Z] [org.hibernate.annotations.common.reflection.java.JavaReflectionManager] [main] [49] [INFO ] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration boolean -> org.hibernate.type.BooleanType@4262fdeb
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration boolean -> org.hibernate.type.BooleanType@4262fdeb
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@4262fdeb
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@77cb452c
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration true_false -> org.hibernate.type.TrueFalseType@6f25bf88
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration yes_no -> org.hibernate.type.YesNoType@62b3a2f6
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration byte -> org.hibernate.type.ByteType@37a0ec3c
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration byte -> org.hibernate.type.ByteType@37a0ec3c
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@37a0ec3c
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration character -> org.hibernate.type.CharacterType@44286963
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration char -> org.hibernate.type.CharacterType@44286963
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@44286963
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration short -> org.hibernate.type.ShortType@456f7d9e
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration short -> org.hibernate.type.ShortType@456f7d9e
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Short -> org.hibernate.type.ShortType@456f7d9e
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration integer -> org.hibernate.type.IntegerType@2047981
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration int -> org.hibernate.type.IntegerType@2047981
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@2047981
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration long -> org.hibernate.type.LongType@3ba1308d
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration long -> org.hibernate.type.LongType@3ba1308d
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Long -> org.hibernate.type.LongType@3ba1308d
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration float -> org.hibernate.type.FloatType@1b3ab4f9
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration float -> org.hibernate.type.FloatType@1b3ab4f9
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Float -> org.hibernate.type.FloatType@1b3ab4f9
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration double -> org.hibernate.type.DoubleType@151732fb
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration double -> org.hibernate.type.DoubleType@151732fb
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@151732fb
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@19e21f89
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@19e21f89
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration big_integer -> org.hibernate.type.BigIntegerType@7f42e06e
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@7f42e06e
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration string -> org.hibernate.type.StringType@50110971
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.String -> org.hibernate.type.StringType@50110971
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration nstring -> org.hibernate.type.StringNVarcharType@310b2b6f
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@315c081
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration url -> org.hibernate.type.UrlType@5bcec67e
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.net.URL -> org.hibernate.type.UrlType@5bcec67e
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration Duration -> org.hibernate.type.DurationType@1bbddada
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.Duration -> org.hibernate.type.DurationType@1bbddada
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration Instant -> org.hibernate.type.InstantType@68b7d0ef
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.Instant -> org.hibernate.type.InstantType@68b7d0ef
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@1f782c05
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@1f782c05
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration LocalDate -> org.hibernate.type.LocalDateType@6ad1701a
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@6ad1701a
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@62aeddc8
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@62aeddc8
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@319642db
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@319642db
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@7d0100ea
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@7d0100ea
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@7f73ce28
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@7f73ce28
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration date -> org.hibernate.type.DateType@3a1f2a1
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.sql.Date -> org.hibernate.type.DateType@3a1f2a1
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration time -> org.hibernate.type.TimeType@5d05f453
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.sql.Time -> org.hibernate.type.TimeType@5d05f453
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration timestamp -> org.hibernate.type.TimestampType@4d93f75b
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@4d93f75b
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.Date -> org.hibernate.type.TimestampType@4d93f75b
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@5d508d22
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration calendar -> org.hibernate.type.CalendarType@2ed9f6f8
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@2ed9f6f8
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@2ed9f6f8
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@79a13920
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration locale -> org.hibernate.type.LocaleType@5921b93c
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@5921b93c
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration currency -> org.hibernate.type.CurrencyType@13803a94
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@13803a94
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration timezone -> org.hibernate.type.TimeZoneType@1ad9b8d3
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@1ad9b8d3
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration class -> org.hibernate.type.ClassType@25b38203
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Class -> org.hibernate.type.ClassType@25b38203
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@7f3ca64a
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@7f3ca64a
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@2519026b
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration binary -> org.hibernate.type.BinaryType@27dc627a
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration byte[] -> org.hibernate.type.BinaryType@27dc627a
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration [B -> org.hibernate.type.BinaryType@27dc627a
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@16f0ec18
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@16f0ec18
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@16f0ec18
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration row_version -> org.hibernate.type.RowVersionType@359066bc
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration image -> org.hibernate.type.ImageType@245253d8
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration characters -> org.hibernate.type.CharArrayType@2233cac0
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration char[] -> org.hibernate.type.CharArrayType@2233cac0
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration [C -> org.hibernate.type.CharArrayType@2233cac0
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@28cd2c2
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@28cd2c2
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@28cd2c2
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration text -> org.hibernate.type.TextType@79b18230
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration ntext -> org.hibernate.type.NTextType@1b57c345
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration blob -> org.hibernate.type.BlobType@2f79f192
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@2f79f192
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@4e8b357d
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration clob -> org.hibernate.type.ClobType@6d6f6860
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@6d6f6860
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration nclob -> org.hibernate.type.NClobType@4bf80c29
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@4bf80c29
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@39b626e5
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@23cd5d42
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration serializable -> org.hibernate.type.SerializableType@4b425577
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration object -> org.hibernate.type.ObjectType@3a38f122
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@3a38f122
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@9b47400
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@747835f5
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@594131f2
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@51d0ec6f
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@7bee8621
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@4e0cc334
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@1e12a5a6
+2021-04-30T14:55:09.009Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@4877919f
+2021-04-30T14:55:09.009Z] [org.hibernate.dialect.Dialect] [main] [157] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-04-30T14:55:10.010Z] [org.hibernate.type.spi.TypeConfiguration] [main] [142] [DEBUG] Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@740a0d5e] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@29013ef2]
+2021-04-30T14:55:10.010Z] [org.hibernate.type.spi.TypeConfiguration] [main] [147] [DEBUG] Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@740a0d5e] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@159ac15f]
+2021-04-30T14:55:11.011Z] [org.hibernate.type.spi.TypeConfiguration] [main] [195] [TRACE] Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@159ac15f] for TypeConfiguration
+2021-04-30T14:55:11.011Z] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [main] [415] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-30T14:55:11.011Z] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration] [main] [236] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-30T14:55:13.013Z] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [main] [69] [INFO ] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2021-04-30T14:55:14.014Z] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport] [main] [171] [INFO ] Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30T14:55:15.015Z] [org.springframework.mock.web.MockServletContext] [main] [444] [INFO ] Initializing Spring TestDispatcherServlet ''
+2021-04-30T14:55:15.015Z] [org.springframework.web.servlet.FrameworkServlet] [main] [524] [INFO ] Initializing Servlet ''
+2021-04-30T14:55:15.015Z] [org.springframework.web.servlet.FrameworkServlet] [main] [546] [INFO ] Completed initialization in 28 ms
+2021-04-30T14:55:15.015Z] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [main] [160] [INFO ] Context refreshed
+2021-04-30T14:55:15.015Z] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [main] [163] [INFO ] Found 1 custom documentation plugin(s)
+2021-04-30T14:55:15.015Z] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [main] [41] [INFO ] Scanning for api listing references
+2021-04-30T14:55:15.015Z] [org.springframework.boot.StartupInfoLogger] [main] [59] [INFO ] Started RegistrationAppApplicationTests in 12.275 seconds (JVM running for 14.332)
+2021-04-30T14:55:15.015Z] [org.springframework.mock.web.MockServletContext] [main] [444] [INFO ] Initializing Spring TestDispatcherServlet ''
+2021-04-30T14:55:15.015Z] [org.springframework.web.servlet.FrameworkServlet] [main] [524] [INFO ] Initializing Servlet ''
+2021-04-30T14:55:15.015Z] [org.springframework.web.servlet.FrameworkServlet] [main] [546] [INFO ] Completed initialization in 4 ms
+2021-04-30T14:55:16.016Z] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport] [Thread-3] [208] [INFO ] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-30T14:55:16.016Z] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [Thread-3] [597] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-30T14:55:16.016Z] [org.hibernate.type.spi.TypeConfiguration] [Thread-3] [201] [TRACE] Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@159ac15f] for TypeConfiguration
+2021-04-30T14:55:16.016Z] [org.hibernate.type.spi.TypeConfiguration$Scope] [Thread-3] [312] [DEBUG] Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@2b09cf30] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@159ac15f]
+2021-04-30T14:55:16.016Z] [com.zaxxer.hikari.HikariDataSource] [Thread-3] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+2021-04-30T14:55:16.016Z] [com.zaxxer.hikari.HikariDataSource] [Thread-3] [352] [INFO ] HikariPool-1 - Shutdown completed.
+2021-04-30T14:56:36.036Z] [org.springframework.boot.StartupInfoLogger] [main] [50] [INFO ] Starting RegistrationAppApplicationTests on DESKTOP-G1RGPL5 with PID 14996 (started by user in C:\Users\user\Downloads\pro2\RegistrationApp)
+2021-04-30T14:56:36.036Z] [org.springframework.boot.SpringApplication] [main] [675] [INFO ] No active profile set, falling back to default profiles: default
+2021-04-30T14:56:38.038Z] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [126] [INFO ] Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-04-30T14:56:38.038Z] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [main] [182] [INFO ] Finished Spring Data repository scanning in 115ms. Found 1 repository interfaces.
+2021-04-30T14:56:39.039Z] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [330] [INFO ] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$60b8e840] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-30T14:56:40.040Z] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+2021-04-30T14:56:40.040Z] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+2021-04-30T14:56:40.040Z] [org.hibernate.jpa.internal.util.LogHelper] [main] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-04-30T14:56:40.040Z] [org.hibernate.Version] [main] [46] [INFO ] HHH000412: Hibernate Core {5.3.7.Final}
+2021-04-30T14:56:40.040Z] [org.hibernate.cfg.Environment] [main] [213] [INFO ] HHH000206: hibernate.properties not found
+2021-04-30T14:56:41.041Z] [org.hibernate.annotations.common.reflection.java.JavaReflectionManager] [main] [49] [INFO ] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration boolean -> org.hibernate.type.BooleanType@2213639b
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration boolean -> org.hibernate.type.BooleanType@2213639b
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@2213639b
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@42ea7565
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration true_false -> org.hibernate.type.TrueFalseType@202898d7
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration yes_no -> org.hibernate.type.YesNoType@53aa38be
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration byte -> org.hibernate.type.ByteType@50b93353
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration byte -> org.hibernate.type.ByteType@50b93353
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@50b93353
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration character -> org.hibernate.type.CharacterType@35adf623
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration char -> org.hibernate.type.CharacterType@35adf623
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@35adf623
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration short -> org.hibernate.type.ShortType@6c8fe7a4
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration short -> org.hibernate.type.ShortType@6c8fe7a4
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Short -> org.hibernate.type.ShortType@6c8fe7a4
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration integer -> org.hibernate.type.IntegerType@5d7911d5
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration int -> org.hibernate.type.IntegerType@5d7911d5
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@5d7911d5
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration long -> org.hibernate.type.LongType@4a9a878
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration long -> org.hibernate.type.LongType@4a9a878
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Long -> org.hibernate.type.LongType@4a9a878
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration float -> org.hibernate.type.FloatType@1b7f06c7
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration float -> org.hibernate.type.FloatType@1b7f06c7
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Float -> org.hibernate.type.FloatType@1b7f06c7
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration double -> org.hibernate.type.DoubleType@feb098f
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration double -> org.hibernate.type.DoubleType@feb098f
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@feb098f
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@776015fc
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@776015fc
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration big_integer -> org.hibernate.type.BigIntegerType@316cda31
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@316cda31
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration string -> org.hibernate.type.StringType@6909f6be
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.String -> org.hibernate.type.StringType@6909f6be
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration nstring -> org.hibernate.type.StringNVarcharType@6b2dd3df
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@5ef85555
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration url -> org.hibernate.type.UrlType@4bb1b96b
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.net.URL -> org.hibernate.type.UrlType@4bb1b96b
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration Duration -> org.hibernate.type.DurationType@41bfa9e9
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.Duration -> org.hibernate.type.DurationType@41bfa9e9
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration Instant -> org.hibernate.type.InstantType@202d9236
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.Instant -> org.hibernate.type.InstantType@202d9236
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@519c6fcc
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@519c6fcc
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration LocalDate -> org.hibernate.type.LocalDateType@713a35c5
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@713a35c5
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@6367a688
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@6367a688
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@68b11545
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@68b11545
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@5ba90d8a
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@5ba90d8a
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@35dece42
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@35dece42
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration date -> org.hibernate.type.DateType@697d6ded
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.sql.Date -> org.hibernate.type.DateType@697d6ded
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration time -> org.hibernate.type.TimeType@664e848c
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.sql.Time -> org.hibernate.type.TimeType@664e848c
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration timestamp -> org.hibernate.type.TimestampType@f2b90fc
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@f2b90fc
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.Date -> org.hibernate.type.TimestampType@f2b90fc
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@7da635c0
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration calendar -> org.hibernate.type.CalendarType@182e7eda
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@182e7eda
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@182e7eda
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@3292d91a
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration locale -> org.hibernate.type.LocaleType@69f2cb04
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@69f2cb04
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration currency -> org.hibernate.type.CurrencyType@28babeca
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@28babeca
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration timezone -> org.hibernate.type.TimeZoneType@656a3d6b
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@656a3d6b
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration class -> org.hibernate.type.ClassType@58833798
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Class -> org.hibernate.type.ClassType@58833798
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@3f8dfe74
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@3f8dfe74
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@77724cbe
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration binary -> org.hibernate.type.BinaryType@16d07cf3
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration byte[] -> org.hibernate.type.BinaryType@16d07cf3
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration [B -> org.hibernate.type.BinaryType@16d07cf3
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@623e0631
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@623e0631
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@623e0631
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration row_version -> org.hibernate.type.RowVersionType@12417468
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration image -> org.hibernate.type.ImageType@3b481bf5
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration characters -> org.hibernate.type.CharArrayType@3fcbc766
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration char[] -> org.hibernate.type.CharArrayType@3fcbc766
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration [C -> org.hibernate.type.CharArrayType@3fcbc766
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@1d4f5506
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@1d4f5506
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@1d4f5506
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration text -> org.hibernate.type.TextType@6e02721d
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration ntext -> org.hibernate.type.NTextType@5c059a68
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration blob -> org.hibernate.type.BlobType@2e1eb85f
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@2e1eb85f
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@6af5b246
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration clob -> org.hibernate.type.ClobType@1e3f0aea
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@1e3f0aea
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration nclob -> org.hibernate.type.NClobType@32a4ecbe
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@32a4ecbe
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@2b44d6d0
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@50085d9c
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration serializable -> org.hibernate.type.SerializableType@4f3e9fbb
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration object -> org.hibernate.type.ObjectType@747835f5
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@747835f5
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@7bee8621
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@4e0cc334
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@1e12a5a6
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@4877919f
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@47a7c93e
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@6f9ab79d
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@64ae105d
+2021-04-30T14:56:41.041Z] [org.hibernate.type.BasicTypeRegistry] [main] [156] [DEBUG] Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@10a18e3e
+2021-04-30T14:56:41.041Z] [org.hibernate.dialect.Dialect] [main] [157] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-04-30T14:56:42.042Z] [org.hibernate.type.spi.TypeConfiguration] [main] [142] [DEBUG] Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@7fef0b40] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@5f395ce1]
+2021-04-30T14:56:42.042Z] [org.hibernate.type.spi.TypeConfiguration] [main] [147] [DEBUG] Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@7fef0b40] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@642c6461]
+2021-04-30T14:56:42.042Z] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [main] [94] [DEBUG] alter table mydb.users add column surname varchar(255) not null
+2021-04-30T14:56:42.042Z] [org.hibernate.type.spi.TypeConfiguration] [main] [195] [TRACE] Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@642c6461] for TypeConfiguration
+2021-04-30T14:56:42.042Z] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [main] [415] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-30T14:56:43.043Z] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration] [main] [236] [WARN ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-30T14:56:44.044Z] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [main] [69] [INFO ] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2021-04-30T14:56:46.046Z] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport] [main] [171] [INFO ] Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30T14:56:46.046Z] [org.springframework.mock.web.MockServletContext] [main] [444] [INFO ] Initializing Spring TestDispatcherServlet ''
+2021-04-30T14:56:46.046Z] [org.springframework.web.servlet.FrameworkServlet] [main] [524] [INFO ] Initializing Servlet ''
+2021-04-30T14:56:46.046Z] [org.springframework.web.servlet.FrameworkServlet] [main] [546] [INFO ] Completed initialization in 34 ms
+2021-04-30T14:56:46.046Z] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [main] [160] [INFO ] Context refreshed
+2021-04-30T14:56:46.046Z] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [main] [163] [INFO ] Found 1 custom documentation plugin(s)
+2021-04-30T14:56:47.047Z] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [main] [41] [INFO ] Scanning for api listing references
+2021-04-30T14:56:47.047Z] [org.springframework.boot.StartupInfoLogger] [main] [59] [INFO ] Started RegistrationAppApplicationTests in 11.468 seconds (JVM running for 13.206)
+2021-04-30T14:56:47.047Z] [org.springframework.mock.web.MockServletContext] [main] [444] [INFO ] Initializing Spring TestDispatcherServlet ''
+2021-04-30T14:56:47.047Z] [org.springframework.web.servlet.FrameworkServlet] [main] [524] [INFO ] Initializing Servlet ''
+2021-04-30T14:56:47.047Z] [org.springframework.web.servlet.FrameworkServlet] [main] [546] [INFO ] Completed initialization in 6 ms
+2021-04-30T14:56:48.048Z] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport] [Thread-3] [208] [INFO ] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-30T14:56:48.048Z] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [Thread-3] [597] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-30T14:56:48.048Z] [org.hibernate.type.spi.TypeConfiguration] [Thread-3] [201] [TRACE] Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@642c6461] for TypeConfiguration
+2021-04-30T14:56:48.048Z] [org.hibernate.type.spi.TypeConfiguration$Scope] [Thread-3] [312] [DEBUG] Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@69e329d0] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@642c6461]
+2021-04-30T14:56:48.048Z] [com.zaxxer.hikari.HikariDataSource] [Thread-3] [350] [INFO ] HikariPool-1 - Shutdown initiated...
+2021-04-30T14:56:48.048Z] [com.zaxxer.hikari.HikariDataSource] [Thread-3] [352] [INFO ] HikariPool-1 - Shutdown completed.
